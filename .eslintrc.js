@@ -7,8 +7,14 @@ const prettierOptions = JSON.parse(
 
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['prettier', 'redux-saga', 'react', 'react-hooks', 'jsx-a11y'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react',
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  plugins: ['prettier', 'redux-saga', 'react', 'react-hooks', 'jsx-a11y', '@typescript-eslint'],
   env: {
     jest: true,
     browser: true,
@@ -16,7 +22,7 @@ module.exports = {
     es6: true,
   },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -85,5 +91,6 @@ module.exports = {
         config: './internals/webpack/webpack.prod.babel.js',
       },
     },
+    'import/parsers': { '@typescript-eslint/parser': ['.ts'] },
   },
 };

@@ -1,0 +1,39 @@
+.hero .header {
+  display: flex;
+  height: 54px;
+  align-items: center;
+  padding: 16px;
+}
+
+.hero .MuiTableContainer-root {
+  max-width: 500px;
+}
+
+.hero .two-columns {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero .MuiTableCell-root {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  padding: 0 16px;
+}
+
+.hero .MuiTableCell-root.with-input {
+  padding-left: 8px;
+}
+
+.hero .MuiFormControl-root {
+  flex-grow: 1;
+}
+
+.hero .MuiInputBase-root,
+.MuiMenuItem-root.select-option {
+  font-size: 14px;
+}
+
+.hero .MuiOutlinedInput-input {
+  padding: 8px 32px 8px 8px;
+}

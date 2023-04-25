@@ -10,7 +10,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
+import Hero from 'containers/Hero';
+import HeroList from 'containers/HeroList';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
@@ -19,7 +20,8 @@ export default function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={HeroList} />
+        <Route path="/hero/:heroId" component={Hero} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
